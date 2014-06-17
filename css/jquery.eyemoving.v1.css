@@ -1,0 +1,78 @@
+/*
+// Copyright by ChenX @ 2014
+// Contact me for support at
+// email : chenxeed@gmail.com
+// github : chenxphyt
+*/
+
+.eye-head {
+	position: fixed; z-index: 1000;
+	text-align: center;
+	width: 120px; height: 100px;
+	background: #f1dbc2;
+	border-radius: 60px 60px 120px 120px;
+	cursor: -webkit-grab; cursor: -moz-grab;
+	box-shadow: 5px 5px 10px grey;
+}
+.eye-head:active {
+	cursor: -webkit-grabbing; cursor: -moz-grabbing;
+}
+.eye-head:before {
+	content: "";
+	position: absolute; top: -38px; left: -15%; z-index: 5;
+	width: 120%; height: 140px;
+	background-image: url('../img/head-hair.png'); /* Source : http://www.downloadclipart.net/browse/14839/anime-hair-clipart */
+	background-size: 100% 100%;
+	border-radius: 20px 20px 0px 0px;
+}
+.eye-head:after {
+	content: "";
+	position: absolute; bottom: 10px; left: 35%;
+	width: 30%; height: 15px;
+	border-bottom: 1px solid #ff3333;
+	border-radius: 50%;
+}
+
+.eye-ball {
+	position: relative; top: 25px;
+	display: inline-block;
+	border-radius: 50%;
+	background: white;
+	overflow: visible;
+}
+.eye-ball:before {
+	content: "";
+	position: absolute; top: 0;
+	width: 40px; height: 10px;
+	background: black;	
+}
+.eye-ball.left:before {
+	right:0;
+	-webkit-transform:rotate(15deg);
+}
+.eye-ball.right:before {
+	left: 0;
+	-webkit-transform:rotate(-15deg);
+}
+.eye-ball > .eye-retina {
+	position: absolute;
+	overflow: visible;
+	background-size: 100% 100%;
+}
+/* Eye source http://all-free-download.com/free-vector/vector-misc/free_vector_eyes_144382.html */
+.eye-ball.left > .eye-retina{
+	background-image: url('../img/eye-left.png');
+}
+.eye-ball.right > .eye-retina{
+	background-image: url('../img/eye-right.png');
+}
+
+.eye-separator {
+	display: inline-block; width: 0px;
+}
+
+@media (max-width: 900px) {
+	.eye-head-mobile-hide {
+		display: none;
+	}
+}
